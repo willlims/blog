@@ -23,7 +23,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'rake', '~> 10.4.2'
+gem 'rake', '~> 11.2.2'
 gem "rack", "1.6.4"
 # gem 'json', '1.8.3'
 # Use ActiveModel has_secure_password
