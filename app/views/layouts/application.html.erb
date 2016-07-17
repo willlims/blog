@@ -1,14 +1,35 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Blog</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+  <!--<title>Blog</title>-->
+  <!--< %= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>-->
+  <!--< %= javascript_include_tag 'application', 'data-turbolinks-track' => true %>-->
+  <!--< %= csrf_meta_tags %>-->
+<!--</head>-->
+<!--<body>-->
 
-<%= yield %>
+<!--< %= yield %>-->
 
-</body>
-</html>
+<!--</body>-->
+<!--</html>-->
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+  <title>博客系统</title>
+  <META content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <meta name="renderer" content="webkit|ie-stand|ie-comp">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+  <script type="text/javascript" src="/jquery-1.5.2.min.js"></script>
+  <script type="text/javascript" src="/jquery-ui-1.8.12.custom.min.js"></script>
+  <link rel="stylesheet" href="/jquery-ui-1.8.12.custom.css" type="text/css" media="screen, projection">
+  <link rel="stylesheet" type="text/css" href="/application.css"/>
+  <%= yield(:head) %>
+</HEAD>
+<BODY>
+<%= render :partial => "layouts/header" -%>
+<%= yield -%>
+</BODY>
+</HTML>

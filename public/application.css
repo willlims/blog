@@ -1,0 +1,351 @@
+BODY {
+    width: 1000px;
+    padding: 0px 100px 0px 100px;
+    margin: 0;
+    font: 12px "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    color: #333;
+    /*background-color: #e5e5e5;*/
+}
+
+TABLE {
+    font-size: 100%
+}
+
+A {
+    background: none transparent scroll repeat 0 0;
+    color: #03c;
+}
+
+A:link {
+    color: #03c;
+}
+
+A:visited {
+    color: #03c;
+}
+
+IMG {
+    vertical-align: middle;
+    border-style: none;
+}
+
+P {
+    margin: 0 0 0.75em;
+    line-height: 1.5em
+}
+
+P IMG {
+    margin: 0;
+    border-style: none;
+}
+
+ul, li {
+    list-style: none;
+}
+
+table, tr, td {
+    padding: 0;
+    margin: 0;
+}
+
+#selBox {
+    position: absolute;
+    top: 100;
+    left: 100;
+    width: expression(document.body.clientWidth*0.6);
+    height: expression(document.body.clientHeight*0.5);
+    background-color: #ffffff;
+    display: none;
+    z-index: 999;
+}
+
+.small {
+    font-size: 8pt;
+}
+
+#black {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: expression(document.body.clientWidth+document.body.scrollLeft);
+    height: expression(document.body.clientHeight+document.body.scrollTop);
+    background-color: #eeeeee;
+    filter: progid:DXImageTransform.Microsoft.DropShadow(color=#eeeeee, offX=2, offY=2, positives=true) progid : DXImageTransform . Microsoft . Alpha(style = 0, opacity = 60);
+    display: none;
+    z-index: 997;
+}
+
+.selBox {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    display: none;
+    z-index: 999;
+}
+
+.portalMessage {
+    background-color: #FFFFE3;
+    border: 1px solid #999966;
+    line-height: 1em;
+    margin: 0;
+    padding: 0.5em;
+}
+
+.flash_err {
+    padding: 5px 8px;
+    margin-bottom: 5px;
+    background-color: #FCC;
+    border: solid 1px #C66;
+    border-image: initial;
+}
+
+.flash_notice {
+    background-color: #CFC;
+    border: solid 1px #6C6;
+    border-image: initial;
+    padding: 5px 8px;
+    margin-bottom: 5px;
+}
+
+#main_div {
+    background: #fff;
+    margin: 5px auto;
+    padding: 5px;
+    width: 98%;
+    *width: 99.8%;
+}
+
+#main_div h3.tit{border-bottom:1px solid #0099CC;margin:5px ;padding:0 5px 3px ;display: block;height:26px;line-height: 28px;}
+#main_div h3.tit .right{display: block;float:right;}
+
+#main_div .c_list {
+    background-color: #fff;
+}
+
+#main_div .c_list table {
+    width: 100%;
+    background-color: #ccc;
+    margin: 3px 0;
+}
+
+#main_div .c_list th {
+    background-color: #eee;
+    padding: 10px;
+}
+
+#main_div .c_list td {
+    background-color: #fff;
+    padding: 5px 3px;
+}
+
+.the-table {
+    border: 1px solid #BBB;
+    border-collapse: collapse;
+}
+
+.the-table th {
+    background: #EEE;
+    border: 1px solid #CCC;
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: left;
+}
+
+.the-table td {
+    border: 1px solid #CCC;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: block;
+}
+
+.clear_float:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.clear_float {
+    display: block;
+}
+
+.pagin, .pagin2 {
+    float: right;
+    margin-right: 10px;
+}
+
+.pagin .current, .pagin .current:hover {
+    color: #ca1f27;
+    font-weight: bold;
+    background: none !important;
+}
+
+.pagin2 .active a, .pagin2 .active a:hover {
+    color: #ca1f27;
+    font-weight: bold;
+    background: none !important;
+}
+
+.pagin2 .active a {
+    border: medium none;
+}
+
+.pagin .text, .pagin .current {
+    border: medium none;
+}
+
+.pagin a, .pagin span, .pagin2 a {
+    border: 1px solid #CCCCCC;
+    border-radius: 3px 3px 3px 3px;
+    float: left;
+    height: 15px;
+    line-height: 15px;
+    margin-left: 4px;
+    overflow: hidden;
+    padding: 2px 6px;
+    color: #005aa0;
+}
+
+.pagin2 li {
+    float: left;
+}
+
+.pagin a:hover, .pagin2 a:hover {
+    float: left;
+    height: 15px;
+    line-height: 15px;
+    margin-left: 5px;
+    background: #ca1f27;
+    border: none;
+    overflow: hidden;
+    padding: 2px 6px;
+    color: #fff;
+    font-weight: bold;
+}
+
+input.searchButton {
+    background-color: silver;
+    font-family: Arial;
+    font-size: 12px;
+    padding: 3px;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+
+.crm-table {
+    BORDER-RIGHT: black thin solid;
+    BORDER-TOP: black thin solid;
+    BORDER-LEFT: black thin solid;
+    BORDER-BOTTOM: black thin solid;
+    BACKGROUND-COLOR: #ffffff;
+    border-right: thin solid black;
+    border-top: thin solid black;
+    border-left: thin solid black;
+    border-bottom: thin solid black;
+}
+
+.crm-table th {
+    background-color: #A6D3F9;
+    text-align: left;
+    font-weight: normal;
+}
+
+.crm-table td {
+    font-size: 9pt;
+    line-height: 12pt;
+    vertical-align: top;
+}
+
+.zeroclipboard-is-hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.zeroclipboard-is-active {
+    cursor: pointer;
+}
+
+.my_clip_button {
+    cursor: pointer;
+}
+
+#firm_update_list_area {
+    display: none;
+    width: 100%;
+}
+
+/*** 清除浮动 clearfix ****/
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.cate_txt .ul_cate_txt {
+    padding: 0;
+    margin: 0;
+}
+
+.cate_txt .ul_cate_txt li {
+    float: left;
+    padding: 5px;
+    background: #c9dda6;
+    margin: 3px 0 3px 5px;
+    white-space: nowrap;
+}
+
+.cate_txt .ul_cate_txt li a {
+    color: red;
+    cursor: pointer;
+}
+
+.error_info {
+    background-color: #c00;
+}
+
+.emp_info_box {
+    position: relative;
+    padding: 0 4px;
+}
+
+.emp_info_box .emp_info {
+    position: absolute;
+    left: 0;
+    top: 13px;
+    width: 350px;
+    background-color: #E1EBF2;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    z-index: 20;
+}
+
+.emp_info table th {
+    text-align: left;
+    font-size: 11px;
+}

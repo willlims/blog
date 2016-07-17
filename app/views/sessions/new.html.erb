@@ -1,0 +1,64 @@
+<style>
+  .container {
+    min-height: 500px;
+  }
+  .content_wrapper {
+    min-height: 372px;
+    padding-top: 40px;
+    margin: 0 20px 60px 25px;
+  }
+
+  element.style {
+    width: 336px;
+    height: 387px;
+    visibility: visible;
+  }
+
+  .login_container {
+    float: right;
+    border: 1px solid #a0b1c4;
+    width: 334px;
+    height: 387px;
+    _height: 371px;
+    background-color: #fff;
+    position: relative;
+    z-index: 12;
+    padding: 0;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+</style>
+<div class="container">
+  <div class="content">
+    <div class="content_wrapper">
+      <div class="login_container" id="login" style="width: 334px; height: 387px; visibility: visible;">
+        <%= form_for :sessions, url: login_url, method: :post do |f| %>
+            <%= f.label :login %>
+            <%= f.text_field :login, class: "form-control", placeholder: "input your name or email" %><br/>
+
+            <%= f.label :password %>
+            <%= f.password_field :password, class: "form-control" %><br/>
+
+            <%= f.submit "登录" %>
+        <% end -%>
+      </div>
+    </div>
+  </div>
+  <div id="nav">
+    <div class="wrapper">
+      <ul>
+        <li><a href="http://www.iteye.com/">首页</a></li>
+        <li><a href="http://www.iteye.com/news">资讯</a></li>
+        <li><a href="http://www.iteye.com/magazines">精华</a></li>
+        <li><a href="http://www.iteye.com/forums">论坛</a></li>
+        <li><a href="http://www.iteye.com/ask">问答</a></li>
+        <li><a href="http://www.iteye.com/blogs">博客</a></li>
+        <li><a href="http://www.iteye.com/blogs/subjects">专栏</a></li>
+        <li><a href="http://www.iteye.com/groups">群组</a></li>
+        <li><a target="_blank" href="http://lib.csdn.net">知识库</a></li>
+        <li class="last"><a href="http://www.iteye.com/search">搜索</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+

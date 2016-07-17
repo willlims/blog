@@ -1,0 +1,5 @@
+<%= form_for @user, url: {action: 'login_to'} do |f| %>
+    用户名:<%= f.text_field :name %><br/>
+    密码:<%= f.text_field :password %><br/>
+    <%= f.submit "登录" %>
+<% end %>

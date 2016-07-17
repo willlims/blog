@@ -1,2 +1,13 @@
-<h1>Hello, Rails!</h1>
-<%= link_to 'My Blog', controller: 'articles' %>
+<style>
+  .news {
+    float: left;
+    width: 720px;
+    display: inline;
+    margin-top: 5px;
+    overflow: hidden;
+  }
+</style>
+<div class="main">
+  <div class="news"></div>
+  <%= render 'welcome/search' %>
+</div>
