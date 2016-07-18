@@ -18,6 +18,10 @@ module SessionsHelper
     @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
   end
 
+  def latest_articles
+    @articles = Article.all.limit(3)
+  end
+
   # def current_user
   #   #先判断session中是否为nil
   #   if (user_id = session[:user_id])
@@ -45,6 +49,7 @@ module SessionsHelper
   end
   #退出，同时删除session中的信息
   def log_out
+    p '-----------------'
     forget(current_user)
     session.delete(:user_id)
     @current_user = nil

@@ -18,7 +18,11 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @articles = Article.all
+    if params[:ids]
+      @articles = Article.find(params[:ids]).limit(10)
+    else
+      @articles = Article.all.limit(10)
+    end
   end
 
   def edit
@@ -42,7 +46,12 @@ class ArticlesController < ApplicationController
   end
 
   def search
-
+    @articles = Article.where(['title like ?', "%#{params[:articles][:title]}%"])
+    # if @articles.blank?
+    #   redirect_to root_path
+    # else
+    #   redirect_to @articles
+    # end
   end
 
   private

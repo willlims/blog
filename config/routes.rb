@@ -3,10 +3,10 @@ Rails.application.routes.draw do
 
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
-  delete 'logout' => 'sessions#destroy'
+  get 'logout' => 'sessions#destroy'
 
+  get 'articles/search' => 'articles#search'
   resources :articles do
-    post 'search' => 'articles#search'
     resources :comments
 
   end

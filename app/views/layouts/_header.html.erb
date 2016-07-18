@@ -11,46 +11,15 @@
     border-bottom: 1px solid #d6dfea;
     background: #eff4fa;
   }
-  div#nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    text-align: left;
-  }
-  div.wrapper {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    font-size: 13px;
-    padding-bottom: 6px;
-    /*background: #6293bb url(../images/shadow.png) repeat-x bottom left;*/
-  }
 </style>
 <div class="header">
   <div class="header_link">
+    <%= link_to '首页', root_path %>&nbsp;|&nbsp;
     <%= link_to '个人信息', current_user %>&nbsp;|&nbsp;
     <% if current_user.present? %>
-        <%= link_to '退出', logout_path, method: :delete %>
+        <%= link_to '退出', logout_path %>
     <% else %>
         <%= link_to '登录', login_path  %>
     <% end %>
-  </div>
-</div>
-<div id="nav">
-  <div class="wrapper">
-    <ul>
-      <li><a href="http://www.iteye.com/" class="selected">首页</a></li>
-      <li><a href="http://www.iteye.com/news">资讯</a></li>
-      <li><a href="http://www.iteye.com/magazines">精华</a></li>
-      <li><a href="http://www.iteye.com/forums">论坛</a></li>
-      <li><a href="http://www.iteye.com/ask">问答</a></li>
-      <li><a href="http://www.iteye.com/blogs">博客</a></li>
-      <li><a href="http://www.iteye.com/blogs/subjects">专栏</a></li>
-      <li><a href="http://www.iteye.com/groups">群组</a></li>
-      <li><a target="_blank" href="http://lib.csdn.net">知识库</a></li>
-      <li class="last"><a href="http://www.iteye.com/search">搜索</a></li>
-    </ul>
   </div>
 </div>

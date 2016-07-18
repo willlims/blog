@@ -14,8 +14,8 @@
 </style>
 <div id="local">
   <div>
-    <%= form_for :articles, url: 'articles/search', method: :post do |f| %>
-        <%= f.text_field :login, :size => "15", :style => "width: 135px;" , placeholder: "输入相关内容" %>
+    <%= form_for :articles, url: '/articles/search', method: :get do |f| %>
+        <%= f.text_field :title, :size => "15", :style => "width: 135px;" , placeholder: "输入相关内容" %>
         <%= f.submit "搜索", :style => "width: 68px;" %>
     <% end -%>
   </div>
@@ -23,25 +23,25 @@
   <div>
     <h3>热门文章</h3>
     <ul>
-      <li><%= link_to 'GlusterFS学习手记', '/new' %></li>
-      <li><%= link_to 'GlusterFS学习手记', '/new' %></li>
-      <li><%= link_to 'GlusterFS学习手记', '/new' %></li>
+      <% latest_articles.each do |article| %>
+          <li><%= link_to article.title.to_s, article %></li>
+      <% end %>
     </ul>
   </div>
   <div>
     <h3>相关文章</h3>
     <ul>
-      <li><%= link_to 'GlusterFS学习手记', '/new' %></li>
-      <li><%= link_to 'GlusterFS学习手记', '/new' %></li>
-      <li><%= link_to 'GlusterFS学习手记', '/new' %></li>
+      <% latest_articles.each do |article| %>
+          <li><%= link_to article.title.to_s, article %></li>
+      <% end %>
     </ul>
   </div>
   <div>
     <h3>一周排行</h3>
     <ul>
-      <li><%= link_to 'GlusterFS学习手记', '/new' %></li>
-      <li><%= link_to 'GlusterFS学习手记', '/new' %></li>
-      <li><%= link_to 'GlusterFS学习手记', '/new' %></li>
+      <% latest_articles.each do |article| %>
+          <li><%= link_to article.title.to_s, article %></li>
+      <% end %>
     </ul>
   </div>
 </div>

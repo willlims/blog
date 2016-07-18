@@ -1,9 +1,115 @@
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
+<style>
+  div {
+    display: block;
+  }
 
-<p>
-  <strong>Text:</strong>
-  <%= @article.text %>
-</p>
+  div#local {
+    width: 188px;
+    border: 1px black solid;
+    padding: 10px 3px 0 3px;
+    margin: 3px 3px 0 0;
+    background-color: #fafafa;
+    overflow: hidden;
+    float: left;
+  }
+
+  #blog_owner {
+    text-align: center;
+    padding: 0 13px;
+  }
+
+
+  #blog_actions {
+    margin-bottom: 20px;
+  }
+
+  ul {
+    margin: 0 0 1.5em 0;
+    padding: 0;
+  }
+
+  ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+  }
+
+  div#main, .blog_main, .pagination a:hover, .pagination a:active {
+    background-color: white;
+    border-color: #108AC6;
+  }
+
+  div#main {
+    border: 1px solid;
+    padding: 5px 12px;
+    margin: 3px 0 0 5px;
+    overflow: hidden;
+    display: inline;
+    float: right;
+    width: 754px;
+  }
+
+  .blog_main, .pagination a:hover, .pagination a:active {
+    background-color: white;
+    border-color: #108AC6;
+  }
+
+  div#content {
+    margin-top: 5px;
+    width: 100%;
+    margin-top: 35px;
+    position: relative;
+    margin: 0 auto 20px auto;
+    padding: 0;
+    text-align: left;
+  }
+</style>
+<div id="content">
+  <div id="local">
+    <div id="blog_owner">
+      <div><%= current_user.name.to_s %></div>
+    </div>
+
+    <div id="blog_actions">
+      <ul>
+        <li>浏览: 58449 次</li>
+        <li>性别: 男</li>
+        <li>来自: 沈阳</li>
+      </ul>
+    </div>
+    <div id="user_visits" class="clearfix">
+      <h5>最近访客
+      <span style="font-weight:normal;font-size:12px;padding-left:30px;">
+        <a href="/blog/user_visits">更多访客&gt;&gt;</a>
+      </span>
+      </h5>
+      <div class="user_visit">
+        <div class="left"><a href="http://qq1264926943.iteye.com" target="_blank" title="qq1264926943">qq1264926943</a>
+        </div>
+      </div>
+      <div class="user_visit">
+        <div class="left"><a href="http://guoxun.iteye.com" target="_blank" title="guoxun">guoxun</a></div>
+      </div>
+    </div>
+
+    <div id="blog_menu">
+      <h5>文章分类</h5>
+      <ul>
+        <li><a href="/">全部博客 (126)</a></li>
+        <li><a href="/category/185738">DOS (1)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="main">
+    <div class="blog_main">
+      <div>
+        <h3><%= link_to @article.title, @article %></h3>
+      </div>
+      <div><%= @article.text %></div>
+    </div>
+  </div>
+</div>
